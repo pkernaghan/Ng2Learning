@@ -30,7 +30,7 @@ System.register(['angular2/core', './author.service'], function(exports_1, conte
                     core_1.Component({
                         selector: 'authors',
                         template: "\n                <h2>Authors</h2>\n                {{ title }}\n                <ul>\n                    <li *ngFor=\"#author of authors\">\n                    {{author}}\n                    </li>\n                </ul>\n                ",
-                        providers: [author_service_1.AuthorService]
+                        providers: [author_service_1.AuthorService],
                     }), 
                     __metadata('design:paramtypes', [author_service_1.AuthorService])
                 ], AuthorsComponent);

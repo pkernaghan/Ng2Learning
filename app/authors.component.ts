@@ -12,7 +12,7 @@ import {AuthorService} from './author.service'
                     </li>
                 </ul>
                 `,
-    providers: [AuthorService]
+    providers: [AuthorService],
 })
 export class AuthorsComponent {
     title: string = "Title for the Authors page";

@@ -1,6 +1,7 @@
 import {Component} from 'angular2/core'
 import {CourseService} from './course.service'
 import {AutoGrowDirective} from './auto-grow.directive'
+import {FavouriteComponent} from './favourite.component'
 
 @Component({
     selector: 'courses',
@@ -9,13 +10,14 @@ import {AutoGrowDirective} from './auto-grow.directive'
                 {{ title }}
                 <input type="text" autoGrow />
                 <ul>
-                    <li *ngFor="#course of courses">
+                    <div *ngFor="#course of courses">
+                    <favourite></favourite>
                     {{course}}
-                    </li>
+                    </div>
                 </ul>
                 `,
     providers: [CourseService],
-    directives: [AutoGrowDirective]
+    directives: [AutoGrowDirective, FavouriteComponent]
 })
 export class CoursesComponent {
     title: string = "The title of courses page";
